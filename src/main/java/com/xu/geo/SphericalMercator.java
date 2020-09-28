@@ -28,8 +28,8 @@ public class SphericalMercator {
 		double d = 180 / Math.PI;
 
 		return new LngLat(
-			(2 * Math.atan(Math.exp(point.y / R)) - Math.PI / 2) * d,
-			point.x * d / R);
+			point.x * d / R,
+			(2 * Math.atan(Math.exp(point.y / R)) - Math.PI / 2) * d);
 	}
     
 }
